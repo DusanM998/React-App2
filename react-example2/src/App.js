@@ -44,6 +44,8 @@ import EquipmentGirls from './components/pages/DevojciceOprema';
 import UpdateProductForm from './components/UpdateProductForm';
 import UpdateProdF from './components/UpdateProdF';
 import ProductUpdate from './components/ProductUpdate';
+import Korpa from './State/Korpa';
+import Card from './components/pages/Card';
 
 
 function App() {
@@ -104,6 +106,7 @@ function App() {
           <Route path='/updateProducForm' component={UpdateProductForm}/>
           <Route path='/updateProdF' component={UpdateProdF}/>
           <Route path='/prodUpdate' component={ProductUpdate}/>
+          <Route path='/korpa' component={Card}/>
         </Switch>
       </Router>
     </>

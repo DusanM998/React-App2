@@ -27,5 +27,6 @@ export default function Korpa (type,props){
         default: { 
             return korpa;
         } 
-     } 
+     }
+        
 }

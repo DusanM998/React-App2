@@ -4,8 +4,9 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { BsPersonCircle } from "react-icons/bs";
+import { BsFillBasket2Fill } from "react-icons/bs";
 
-function Navbar({isLogin}) {
+function Navbar({isLogin, korpa}) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -72,13 +73,22 @@ function Navbar({isLogin}) {
             </li>
             
           </ul>
-          {!isLogin ? <ButtonSignUp buttonStyle='btn--outline'>Prijavi se</ButtonSignUp> : 
+          {(!isLogin) ? <ButtonSignUp buttonStyle='btn--outline'>Prijavi se</ButtonSignUp> : 
             <div className='nav-item'>
               <Link
                 to='/user'
                 className='nav-links'
               >
                 <BsPersonCircle/>
+              </Link>
+            </div>}
+            {(!isLogin) ? <div ></div> : 
+            <div className='nav-item'>
+              <Link
+                to='/korpa'
+                className='nav-links'
+              >
+                <BsFillBasket2Fill/>
               </Link>
             </div>}
         </div>

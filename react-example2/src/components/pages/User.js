@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import '../User.css';
 
 
-export default function User(setIsLogin) {
+export default function User(setIsLogin, setKorpa) {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -45,7 +45,7 @@ export default function User(setIsLogin) {
 
   return (
     <div className='cards-user'>
-    <h1>Korisnik: </h1>
+    <h1>Korisnik: {username}</h1>
     <div className='cards__container_user'>
       <div className='cards__wrapper_user'>
         <ul className='cards__items_user'>

@@ -4,7 +4,7 @@ import './Form.css';
 import FormLogin from './FormLogin';
 import FormSuccess from './FormSuccess';
 
-const FormL = ({setIsLogin}) => {
+const FormL = ({setIsLogin, setKorpa}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
@@ -18,7 +18,7 @@ const FormL = ({setIsLogin}) => {
           <img className='form-img' src='/img/img-2.jpg' alt='image' />
         </div>
         {!isSubmitted ? (
-          <FormLogin setIsLogin={setIsLogin} submitForm={submitForm} />
+          <FormLogin setIsLogin={setIsLogin} setKorpa={setKorpa} submitForm={submitForm} />
         ) : (
           <FormSuccess />
         )}

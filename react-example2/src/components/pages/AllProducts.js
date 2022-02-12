@@ -43,6 +43,7 @@ export default function AllUsers() {
   };
 
   const podaci = chunks(articles, 4);
+  
   return (
     <div className='cards_user'>
     <h1>Svi proizvodi</h1>

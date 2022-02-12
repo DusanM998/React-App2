@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
-const FormLogin = ({ submitForm, setIsLogin}) => {
+const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
     const { handleChange, handleSubmit, values, errors } = useForm(
       submitForm,
       validate
@@ -46,7 +46,7 @@ const FormLogin = ({ submitForm, setIsLogin}) => {
       }*/
       setCookie("id", data.username);
       setIsLogin(true);
-
+      setKorpa(true)
       history.push("/");
     };
 
