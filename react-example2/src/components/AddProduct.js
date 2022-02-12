@@ -111,10 +111,10 @@ const AddProduct = ({ submitForm, setIsLogin}) => {
           setKategorija(selectOptionCategory.value)}, [selectOptionCategory] );
 
     const optionsPol = [
-        { value: 'muski', label: 'Muski' },
-        { value: 'zenski', label: 'Zenski' },
-        { value: 'decaci', label: 'Decaci' },
-        { value: 'muski', label: 'Muski' },
+        { value: 'Muski', label: 'Muski' },
+        { value: 'Zenski', label: 'Zenski' },
+        { value: 'Decaci', label: 'Decaci' },
+        { value: 'Devojcice', label: 'Devojcice' },
     ]
 
     const fileSelectedHandler = event => {

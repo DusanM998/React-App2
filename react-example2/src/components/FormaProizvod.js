@@ -35,7 +35,7 @@ export default function FormaProizvod(props)
             <div className='cards__wrapper'>
               <ul className='cards__items'>
                 <CardItem
-                //src={props.src}
+                src={props.src}
                 text={props.text}
                 label={props.label}
                 path='/'
