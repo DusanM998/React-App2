@@ -25,6 +25,11 @@ const UpdateProductForm = ({ submitForm, props}) => {
     const location = useLocation()
     const { src } = location.state
     const { text } = location.state
+    const { poll } = location.state
+    const { cenaa } = location.state
+    const { poenii } = location.state
+    const { ocenaa } = location.state
+    const { akcijaa } = location.state
 
     const [product,setProduct]=useState([]);
 
@@ -44,6 +49,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
     
     const nesto = (name,price,brand,ocena,
       discount,gender,image) => {
+        let img = image.substring(12,image.length)
       const requestOptions = {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -51,7 +57,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
       };
   
       fetch('https://localhost:44396/Sport/UpdateProduct/' + text + "/" + name + "/"+ price + "/"+ brand + "/"+ ocena + 
-      "/"+ discount + "/"+ gender + "/" + image, requestOptions);
+      "/"+ discount + "/"+ gender + "/" + img, requestOptions);
     }
 
     useEffect(() => {}, []);
@@ -102,10 +108,10 @@ const UpdateProductForm = ({ submitForm, props}) => {
           setKategorija(selectOptionCategory.value)}, [selectOptionCategory] );
 
     const optionsPol = [
-        { value: 'muski', label: 'Muski' },
-        { value: 'zenski', label: 'Zenski' },
-        { value: 'decaci', label: 'Decaci' },
-        { value: 'muski', label: 'Muski' },
+        { value: 'Muski', label: 'Muski' },
+        { value: 'Zenski', label: 'Zenski' },
+        { value: 'Decaci', label: 'Decaci' },
+        { value: 'Devojcice', label: 'Devojcice' },
     ]
 
     const optionsCategory = [
@@ -120,7 +126,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
       <div className='form-content-right'>
         <form onSubmit={handleSubmit} className='form' noValidate>
           <h1>
-            Dodavanje proizvoda.
+            Izmena proizvoda: {text}
           </h1>
           <div className='form-inputs'>
             <label className='form-label'>Naziv</label>
@@ -128,7 +134,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
               className='form-input'
               type='text'
               name='name'
-              placeholder='Unesite naziv proizvoda'
+              placeholder={text}
               
               value={name}
               onChange={updateName}
@@ -141,7 +147,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
               className='form-input'
               type='number'
               name='price'
-              placeholder='Unesite cenu'
+              placeholder={cenaa}
               
               value={price}
               onChange={updatePrice}
@@ -166,7 +172,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
               className='form-input'
               type='number'
               name='ocena'
-              placeholder='Unesite ocenu'
+              placeholder={ocenaa}
               
               value={ocena}
               onChange={updateOcena}
@@ -178,7 +184,7 @@ const UpdateProductForm = ({ submitForm, props}) => {
               className='form-input'
               type='number'
               name='discount'
-              placeholder='Unesite popust'
+              placeholder={akcijaa}
               
               value={discount}
               onChange={updateDiscount}

@@ -19,7 +19,7 @@ export default function Equipment() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetAllProducts/Oprema za trening/",
+      "https://localhost:44396/Sport/GetAllProducts/Oprema",
       requestOptions
     );
     const data = await response.json();

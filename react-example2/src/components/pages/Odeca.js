@@ -18,7 +18,7 @@ export default function Clothes() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetGenderProducts/Odeca/Muski/",
+      "https://localhost:44396/Sport/GetAllProducts/Obuca",
       requestOptions
     );
     const data = await response.json();
