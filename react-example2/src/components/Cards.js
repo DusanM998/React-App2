@@ -38,7 +38,7 @@ function Cards() {
             />
             <CardItem
               src='images/img-8.jpg'
-              text='Istražite ponudu opreme za trening'
+              text='Istražite ponudu opreme'
               label='Oprema za trening'
               path='/oprema'
             />

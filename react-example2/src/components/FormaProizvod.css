@@ -9,6 +9,14 @@
     flex-wrap: wrap;
 }
 
+.Forma-user
+{
+    display: flex;
+    flex-flow:column;
+    align-items:center;
+    width: 100%;
+}
+
 .StarAndButton
 {
     padding-left: 10%;

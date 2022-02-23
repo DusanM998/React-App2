@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { BsPersonCircle } from "react-icons/bs";
 import { BsFillBasket2Fill } from "react-icons/bs";
+import { IoIosLogOut } from "react-icons/io";
 
 function Navbar({isLogin, korpa}) {
   const [click, setClick] = useState(false);
@@ -89,6 +90,15 @@ function Navbar({isLogin, korpa}) {
                 className='nav-links'
               >
                 <BsFillBasket2Fill/>
+              </Link>
+            </div>}
+            {(!isLogin) ? <div ></div> : 
+            <div className='nav-item'>
+              <Link
+                to='/user'
+                className='nav-links'
+              >
+                <IoIosLogOut/>
               </Link>
             </div>}
         </div>

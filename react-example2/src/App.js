@@ -46,6 +46,8 @@ import UpdateProdF from './components/UpdateProdF';
 import ProductUpdate from './components/ProductUpdate';
 import Korpa from './State/Korpa';
 import Card from './components/pages/Card';
+import UserProfile from './components/pages/UserProfile';
+import ProizvodKorpa from './components/pages/ProizvodKorpa';
 
 
 function App() {
@@ -102,11 +104,14 @@ function App() {
           <Route path='/devojciceObuca' component={ShoesGirls}/>
           <Route path='/devojciceOdeca' component={ClothesGirls}/>
           <Route path='/decaciOprema' component={EquipmentBoys}/>
-          <Route path='/devojcice' component={EquipmentGirls}/>
+          <Route path='/devojciceOprema' component={EquipmentGirls}/>
+          <Route path='/devojcice' component={Devojcice}/>
           <Route path='/updateProducForm' component={UpdateProductForm}/>
           <Route path='/updateProdF' component={UpdateProdF}/>
           <Route path='/prodUpdate' component={ProductUpdate}/>
           <Route path='/korpa' component={Card}/>
+          <Route path='/userProfile' component={UserProfile}/>
+          <Route path='/proizvodKorpa' component={ProizvodKorpa}/>
         </Switch>
       </Router>
     </>

@@ -30,6 +30,11 @@
     width: 1000px;
   }
 
+  .cards__items-user {
+    margin-bottom: 24px;
+    width: 500px;
+  }
+
   .cards__items_supplements {
     margin-bottom: 24px;
     width: 1000px;

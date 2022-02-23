@@ -55,7 +55,7 @@ export default function Suplementi() {
             {
             childs.map(c=>(
             <CardItem
-            src={c?.image}
+            src={'images/' + c?.image}
             text={c?.name}
             label={c?.gender}
             cena={c?.price}

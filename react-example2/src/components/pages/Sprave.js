@@ -58,7 +58,7 @@ export default function Sprave() {
               /*src={c?.ObucaSlika}
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

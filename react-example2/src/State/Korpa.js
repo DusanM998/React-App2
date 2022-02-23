@@ -4,6 +4,7 @@ import { useEffect,useState} from 'react'
 export let korpa = []
 
 export default function Korpa (type,props){
+    
     switch(type) { 
         case "vratiKorpu": { 
             return korpa; 
@@ -28,5 +29,4 @@ export default function Korpa (type,props){
             return korpa;
         } 
      }
-        
 }

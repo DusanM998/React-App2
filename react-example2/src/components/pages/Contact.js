@@ -4,12 +4,25 @@ import '../Contact.css';
 import { Link } from 'react-router-dom';
 import { ButtonSignUp } from '../ButtonSignUp';
 import { Button } from '../Button';
+import emailjs from '@emailjs/browser';
 
 
 export default function Contact() {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_8kj2qpe', e.target, 'user_nhLlXrZRagZ6U668bxCUN')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   
   return(
     <div className='kontakt'>
+      <form onSubmit={sendEmail}>
       <div className='form-contact'>
           <h1 className='naslov'>Kontaktirajte nas</h1>
           <div className='form-inputs'>
@@ -18,6 +31,7 @@ export default function Contact() {
                 className='form-input'
                 type='text'
                 placeholder='Ime'
+                name='to_name'
                 ></input>
           </div>
           <div className='form-inputs'>
@@ -26,25 +40,30 @@ export default function Contact() {
                 className='form-input'
                 type='text'
                 placeholder='E-mail'
+                name='email'
                 ></input>
           </div>
           <div className='form-inputs'>
               <label className='form-label'>Poruka</label>
-              <input
+              <textarea
                 className='form-input-msg'
                 type='text'
                 placeholder='Poruka'
-                ></input>
+                name='message'
+                ></textarea>
           </div>
           <div className="contact-btns">
-            <button 
+            <button
+            type='submit'
             className='btn-send' 
             buttonStyle='btn--primary'
             buttonSize='btn--large'
             > Pošalji <i class="fas fa-paper-plane"></i>
             </button>
       </div>
-      </div>
+      </div>  
+      </form>
+      
       <section class='social-media1'>
         <div class='social-media-wrap1'>
           <div class='footer-logo'>

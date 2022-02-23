@@ -18,7 +18,7 @@ export default function ClothesGirls() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetGenderProducts/Odeca/Devojcica/",
+      "https://localhost:44396/Sport/GetGenderProducts/Odeca/Devojcice/",
       requestOptions
     );
     const data = await response.json();
@@ -43,7 +43,7 @@ export default function ClothesGirls() {
 
   return (
     <div className='cards'>
-    <h1>Obuća</h1>
+    <h1>Odeća</h1>
     <div className='cards__container'>
     <div className='cards__wrapper'>
 
@@ -60,7 +60,7 @@ export default function ClothesGirls() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

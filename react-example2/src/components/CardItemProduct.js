@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Cards.css';
 import { useCookies } from 'react-cookie';
+import { useHistory } from "react-router-dom";
 
 function CardItemProduct(props) {
 
     const [cookies, setCookie, removeCookie] = useCookies(['Product']);
     
     const {product, setAllProducts} = props;
+    const history = useHistory();
     
     /*const deleteProduct = async () => {
         const requestOptions = {
@@ -25,6 +27,7 @@ function CardItemProduct(props) {
             headers: { 'Content-Type': 'application/json' },
         };
         fetch('https://localhost:44396/Sport/DeleteProduct/' + product.name, requestOptions);
+        history.push("/allproducts")
     }
 
     return (

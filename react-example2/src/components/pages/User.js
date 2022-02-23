@@ -13,6 +13,12 @@ export default function User(setIsLogin, setKorpa) {
     const [cookies, setCookie, removeCookie] = useCookies(["User"]);
     const [nesto, setNesto] = useState(0);
     const history = useHistory();
+
+    const [korisnik, setUserProfile] = useState([]);
+
+    useEffect(() => {
+      getUser();
+  },[korisnik] );
     
     const getUser = async () => {
       const requestOptions = {
@@ -35,6 +41,7 @@ export default function User(setIsLogin, setKorpa) {
     function logout(){
         removeCookie("id");
         history.push("/");
+        window.location.reload(true);
     }
 
     useEffect(() => {}, []);
@@ -50,16 +57,10 @@ export default function User(setIsLogin, setKorpa) {
       <div className='cards__wrapper_user'>
         <ul className='cards__items_user'>
           <CardItem
-            src='images/img-shop.jpg'
-            text='Moje porudžbine'
-            label='Porudžbine'
-            path='/'
-          />
-          <CardItem
             src='images/img-profile.jpg'
             text='Moj profil'
             label='Profil'
-            path='/'
+            path='/userProfile'
           />
         </ul>
         <button className='logout-btn' type='submit' onClick={logout}>Logout</button>

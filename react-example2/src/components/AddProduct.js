@@ -115,6 +115,7 @@ const AddProduct = ({ submitForm, setIsLogin}) => {
         { value: 'Zenski', label: 'Zenski' },
         { value: 'Decaci', label: 'Decaci' },
         { value: 'Devojcice', label: 'Devojcice' },
+        { value: 'Neutral', label: 'Neutral' },
     ]
 
     const fileSelectedHandler = event => {

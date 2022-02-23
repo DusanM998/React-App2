@@ -18,7 +18,7 @@ export default function ShoesGirls() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetGenderProducts/Obuca/Devojcica/",
+      "https://localhost:44396/Sport/GetGenderProducts/Obuca/Devojcice/",
       requestOptions
     );
     const data = await response.json();
@@ -60,7 +60,7 @@ export default function ShoesGirls() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

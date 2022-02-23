@@ -14,13 +14,13 @@ export default function Devojcice() {
               src='images/girlsSho.jpg'
               text='Istražite ponudu obuće za devojčice'
               label='Obuća'
-              path='/obucaGirls'
+              path='/devojciceObuca'
             />
             <CardItem
               src='images/img-girls.jpg'
               text='Istražite ponudu odeće za devojčice'
               label='Odeća'
-              path='/odecaGirls'
+              path='/devojciceOdeca'
             />
           </ul>
           <ul className='cards__items'>
@@ -28,7 +28,7 @@ export default function Devojcice() {
               src='images/girlsEqu.jpg'
               text='Istražite ponudu opreme za devojčice'
               label='Oprema za trening'
-              path='/equipmentGirls'
+              path='/devojciceOprema'
             />
           </ul>
         </div>

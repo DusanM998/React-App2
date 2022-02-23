@@ -14,13 +14,13 @@ export default function Decaci() {
               src='images/boysSho.jpg'
               text='Istražite ponudu obuće za dečake'
               label='Obuća'
-              path='/obucaBoys'
+              path='/decaciObuca'
             />
             <CardItem
               src='images/img-boys.jpg'
               text='Istražite ponudu odeće za dečake'
               label='Odeća'
-              path='/odecaBoys'
+              path='/decaciOdeca'
             />
           </ul>
           <ul className='cards__items'>
@@ -28,7 +28,7 @@ export default function Decaci() {
               src='images/boysEqu.jpg'
               text='Istražite ponudu opreme za dečake'
               label='Oprema za trening'
-              path='/equipmentBoys'
+              path='/decaciOprema'
             />
           </ul>
         </div>

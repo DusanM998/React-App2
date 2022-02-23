@@ -7,14 +7,16 @@ import '../User.css';
 import Korpa from "../../State/Korpa"
 
 
-export default function Card(setIsLogin, setKorpa) {
+export default function Card({props}) {
+
+  let k = Korpa("vratiKorpu",null);
 
   useEffect(() => {
     
-    let k = Korpa("vratiKorpu",null);
+    /*let k = Korpa("vratiKorpu",null);
     console.log(k);
     let k1 = Korpa("izprazniKorpu",null);
-    console.log(k1)
+    console.log(k);*/
 },[] );
 
 const [articles,setAllProducts] = useState([]);
@@ -37,19 +39,21 @@ const podaci = chunks(articles, 4);
     <h1>Korpa:  </h1>
     <div className='cards__container_user'>
       <div className='cards__wrapper_user'>
-      {
-         podaci.map(childs=>(
-          <ul className='cards__items_user'>
-          {
-          childs.map(c=>(
-            <CardItem
-              k = {c}
-            />
-            ))
-            }
-          </ul>
-          ))
-        }
+        <ul className='cards__items_user'>
+          {k.map(pObj=> (
+            <CardItem key={pObj.text} 
+              src={pObj.src}
+              text={pObj.text}
+              label={pObj.label}
+              cena={pObj.cena}
+              poeni={pObj.poeni}
+              akcija={pObj.akcija}
+              ocena={pObj.akcija}
+              path='/proizvodKorpa'> 
+            </CardItem>
+          ) 
+          )}
+        </ul>
       </div>
     </div>
   </div>

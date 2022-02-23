@@ -18,7 +18,7 @@ export default function Clothes() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetAllProducts/Obuca",
+      "https://localhost:44396/Sport/GetAllProducts/Odeca",
       requestOptions
     );
     const data = await response.json();
@@ -60,7 +60,7 @@ export default function Clothes() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

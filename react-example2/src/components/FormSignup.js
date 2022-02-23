@@ -87,8 +87,10 @@ const FormSignup = ({ submitForm }) => {
   }*/
 
   const options = [
-    { value: 'muski', label: 'Muski' },
-    { value: 'zenski', label: 'Zenski' }
+    { value: 'Muski', label: 'Muski' },
+    { value: 'Zenski', label: 'Zenski' },
+    { value: 'Decaci', label: 'Decaci' },
+    { value: 'Devojcice', label: 'Devojcice' }
   ]
 
   return (
@@ -109,7 +111,7 @@ const FormSignup = ({ submitForm }) => {
             value={name}
             onChange={updateName}
           />
-          {errors.name && <p>{errors.name}</p>}
+          {/*errors.name && <p>{errors.name}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Prezime</label>
@@ -123,7 +125,7 @@ const FormSignup = ({ submitForm }) => {
             value={lastname}
             onChange={updateLastname}
           />
-          {errors.lastname && <p>{errors.lastname}</p>}
+          {/*errors.lastname && <p>{errors.lastname}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Korisničko ime</label>
@@ -137,7 +139,7 @@ const FormSignup = ({ submitForm }) => {
             value={username}
             onChange={updateUsername}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {/*errors.username && <p>{errors.username}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
@@ -151,7 +153,7 @@ const FormSignup = ({ submitForm }) => {
             value={email}
             onChange={updateEmail}
           />
-          {errors.email && <p>{errors.email}</p>}
+          {/*errors.email && <p>{errors.email}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Šifra</label>
@@ -165,7 +167,7 @@ const FormSignup = ({ submitForm }) => {
             value={password}
             onChange={updatePassword}
           />
-          {errors.password && <p>{errors.password}</p>}
+          {/*errors.password && <p>{errors.password}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Potvrdite šifru</label>
@@ -179,7 +181,7 @@ const FormSignup = ({ submitForm }) => {
             value={passwordConf}
             onChange={updatePasswordConf}
           />
-          {errors.passwordConf && <p>{errors.passwordConf}</p>}
+          {/*errors.passwordConf && <p>{errors.passwordConf}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Broj telefona</label>
@@ -193,7 +195,7 @@ const FormSignup = ({ submitForm }) => {
             value={phoneNumber}
             onChange={updatePhoneNumber}
           />
-          {errors.phoneNumber && <p>{errors.phoneNumber}</p>}
+          {/*errors.phoneNumber && <p>{errors.phoneNumber}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Adresa</label>
@@ -207,7 +209,7 @@ const FormSignup = ({ submitForm }) => {
             value={address}
             onChange={updateAdress}
           />
-          {errors.address && <p>{errors.address}</p>}
+          {/*errors.address && <p>{errors.address}</p>*/}
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Pol</label>

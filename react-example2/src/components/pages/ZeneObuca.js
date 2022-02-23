@@ -18,7 +18,7 @@ export default function ObucaWomen() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetAllProducts/Obuca/Zenski",
+      "https://localhost:44396/Sport/GetGenderProducts/Obuca/Zenski",
       requestOptions
     );
     const data = await response.json();
@@ -60,7 +60,7 @@ export default function ObucaWomen() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

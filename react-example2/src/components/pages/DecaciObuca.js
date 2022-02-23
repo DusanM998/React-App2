@@ -18,7 +18,7 @@ export default function ShoesBoys() {
       credential: 'include'
     }; 
     const response = await fetch(
-      "https://localhost:44396/Sport/GetGenderProducts/Obuca/Decak/",
+      "https://localhost:44396/Sport/GetGenderProducts/Obuca/Decaci/",
       requestOptions
     );
     const data = await response.json();
@@ -60,7 +60,7 @@ export default function ShoesBoys() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

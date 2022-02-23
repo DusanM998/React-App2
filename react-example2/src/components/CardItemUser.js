@@ -33,7 +33,7 @@ function CardItemUser(props) {
           </figure>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.text}</h5>
-            <button className='delete-btn' onClick={this.deleteUser}>Obrisi korisnika</button>
+            <button className='delete-btn' onClick={deleteUser}>Obrisi korisnika</button>
           </div>
         </div>
       </li>

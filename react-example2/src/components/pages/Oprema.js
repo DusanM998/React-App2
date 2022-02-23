@@ -43,7 +43,7 @@ export default function Equipment() {
 
   return (
     <div className='cards'>
-    <h1>Oprema za trening</h1>
+    <h1>Oprema</h1>
     <div className='cards__container'>
     <div className='cards__wrapper'>
 
@@ -56,7 +56,7 @@ export default function Equipment() {
             {
             childs.map(c=>(
             <CardItem
-            src={c?.image}
+            src={'images/' + c?.image}
             text={c?.name}
             label={c?.gender}
             cena={c?.price}

@@ -2,6 +2,13 @@
     padding: 4rem;
     background: #fff;
 }
+
+.cards-user-korpa{
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
   
 h1 {
     text-align: center;
@@ -59,4 +66,30 @@ h1 {
 .link-back{
     font-size: xx-large;
     color: rgb(172, 37, 37);
+}
+
+.button-izbaci{
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(138, 50, 34) 0%,
+      rgb(101,0,38) 100%
+    );
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.button-izbaci:hover{
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      rgb(182, 13, 7) 0%,
+      rgb(156, 58, 58) 100%
+    );
+    transition: all 0.4s ease-out;
 }

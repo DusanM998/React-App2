@@ -9,10 +9,10 @@ export default function Proizvod({product}) {
   const [proizvod, setProizvod] = useState([]);
 
   useEffect(() => {
-    getProduct();
+    //getProduct();
 },[proizvod] );
 
-const getProduct = async () =>
+/*const getProduct = async () =>
     {
         const requestOptions = {
             method: 'GET',
@@ -22,7 +22,7 @@ const getProduct = async () =>
         const response = await fetch("https://localhost:44396/Sport/GetProductByName/" + product.username,requestOptions);
         const data = await response.json();
         setProizvod(data);
-    }
+    }*/
 
   const location = useLocation()
   const { src } = location.state

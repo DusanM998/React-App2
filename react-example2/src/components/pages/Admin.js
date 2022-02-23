@@ -8,11 +8,41 @@ import '../Admin.css';
 
 export default function Admin(setIsLogin) {
 
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [cookies, setCookie, removeCookie] = useCookies(["User"]);
+    const [nesto, setNesto] = useState(0);
+    const history = useHistory();
+    const [role, setRole] = useState("");
+    
+    const getUser = async () => {
+      const requestOptions = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credential: 'include'
+      };
+      const response = await fetch(
+        "https://localhost:44396/Sport/GetUserByUsername/" + username,
+        requestOptions
+      );
+      const data = await response.json();
+      console.log(data);
+      setCookie("username", data.username);
+      setRole(response.data.user[0].role);
+      history.push("/");
+    };
 
+  function logout(){
+    removeCookie("id");
+    history.push("/");
+    window.location.reload(true);
+  }
 
   return (
     <div className='cards-admin'>
-    <h1>Admin </h1>
+    <h1>Admin {role}</h1>
     <div className='cards__container_admin'>
       <div className='cards__wrapper_admin'>
         <ul className='cards__items_admin'>
@@ -35,7 +65,7 @@ export default function Admin(setIsLogin) {
             path='/addProduct'
           />
         </ul>
-        <button className='logout-btn' type='submit'>Logout</button>
+        <button className='logout-btn' type='submit' onClick={logout}>Logout</button>
       </div>
     </div>
   </div>

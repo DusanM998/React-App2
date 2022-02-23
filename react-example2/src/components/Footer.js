@@ -8,25 +8,7 @@ import Contact from './pages/Contact';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Ukoliko imate dodatnih pitanja
-        </p>
-        <p className='footer-subscription-text'>
-          Možete nam se obratiti putem e-mail-a.
-        </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='E-mail'
-            />
-            <Button buttonStyle='btn--outline'>NEWSLETTER</Button>
-          </form>
-        </div>
-      </section>
+
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>

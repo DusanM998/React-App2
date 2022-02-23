@@ -43,7 +43,7 @@ export default function EquipmentMen() {
 
   return (
     <div className='cards'>
-    <h1>Odeća</h1>
+    <h1>Oprema</h1>
     <div className='cards__container'>
     <div className='cards__wrapper'>
 
@@ -60,7 +60,7 @@ export default function EquipmentMen() {
               te
               text={c?.name}
               label={"Cena:" + c?.price + "RSD"}*/
-              src={c?.image}
+              src={'images/' + c?.image}
               text={c?.name}
               label={c?.gender}
               cena={c?.price}

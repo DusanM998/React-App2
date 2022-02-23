@@ -6,6 +6,7 @@ import FormSuccess from './FormSuccess';
 import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import Admin from "./pages/Admin";
 
 const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
     const { handleChange, handleSubmit, values, errors } = useForm(
@@ -18,6 +19,7 @@ const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
     const [cookies, setCookie, removeCookie] = useCookies(["User"]);
     const [nesto, setNesto] = useState(0);
     const history = useHistory();
+    const [role, setRole] = useState("");
     
     const getUser = async () => {
       const requestOptions = {
@@ -32,7 +34,7 @@ const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
         requestOptions
       );
       const data = await response.json();
-      console.log(data);
+      console.log(data.role);
       /*if (data == null) {
         const response2 = await fetch(
           "https://localhost:44396/Sport/GetUserByUsername/" + username,
@@ -46,7 +48,6 @@ const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
       }*/
       setCookie("id", data.username);
       setIsLogin(true);
-      setKorpa(true)
       history.push("/");
     };
 
@@ -96,7 +97,7 @@ const FormLogin = ({ submitForm, setIsLogin,setKorpa}) => {
             {/*errors.password && <p>{errors.password}</p>*/}
           </div>
 
-          <button className='form-input-btn' type='submit' onClick={getUser}>
+          <button className='form-input-btn' type='submit' onClick={getUser} Link>
             Login
           </button>
           <span className='form-input-login'>
